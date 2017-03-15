@@ -10,22 +10,21 @@
     <h2>Tic Tac Toe</h2>
     <div class="box">
       <table class="ticTable">
-        <tbody>
+        <tbody >
           <tr>
-            <td id ="1"onclick="play(event)"class="borderBottom borderRight"></td>
-            <td id ="2" onclick="play(event)"class="borderBottom borderRight"></td>
-            <td id ="3"onclick="play(event)"class="borderBottom borderRight"></td>
+            <td id="0" onclick ="play(event)" class="borderBottom borderRight"></td>
+            <td id="1" onclick ="play(event)" class="borderBottom borderRight"></td>
+            <td id="2" onclick ="play(event)" class="borderBottom"></td>
           </tr>
           <tr>
-           <td id ="4" onclick="play(event)"class="borderBottom borderRight"></td>
-           <td id ="5"onclick="play(event)"class="borderBottom borderRight"></td>
-           <td id ="6"onclick="play(event)"class="borderBottom borderRight"></td>
+            <td id="3" onclick ="play(event)" class="borderBottom borderRight"></td>
+            <td id="4" onclick ="play(event)" class="borderBottom borderRight"></td>
+            <td id="5" onclick ="play(event)" class="borderBottom"></td>
           </tr>
           <tr>
-            <td id ="7"onclick="play(event)"class="borderBottom borderRight"></td>
-            <td id ="8"onclick="play(event)"class="borderBottom borderRight"></td>
-            <td id ="9"onclick="play(event)"class="borderBottom borderRight"></td>
-            <td></td>
+            <td id="6" onclick ="play(event)" class="borderRight"></td>
+            <td id="7" onclick ="play(event)" class="borderRight"></td>
+            <td id="8" onclick ="play(event)"></td>
           </tr>
         </tbody>
       </table>
@@ -38,12 +37,9 @@
       <span class="markLabel">O</span>
       <br/>
       <div class="statusDiv borderBottom">Game Status</div>
-      <p>New Game</p>
+      <p id = "status-d" onclick = "play(event)">New Game</p>
       <!-- Game Status Messages: Game in progress | Player 1 wins | Player 2 wins -->
-      
-
-     
-      <button>Restart</button>
+      <button onclick = "restart()">Restart</button>
     </div>
   </div>
 </body>

@@ -1,5 +1,3 @@
-//JS code goes here
-
 var turn = true;
 
 //declared all false to avoid undefined value conflicts
@@ -16,8 +14,8 @@ var endGame = [
 	[6,7,8],
 	[0,4,8],
 	[2,4,6],
-	[0,3,6],
 	[1,4,7],
+	[0,3,6],
 	[2,5,8]
 ];
 
@@ -38,22 +36,22 @@ function play(event){
 		var result = checkEndGame();
 
 		if (result === 1) {
-			console.log("Player 1 wins!!!");
-			document.getElementById('status').innerHTML = "Player 1 wins!!!";
+			console.log("Player 1 wins!");
+			document.getElementById('status-d').innerHTML = "Player 1 wins!";
 			gameOver = true;
 		}
 		if (result === 0) {
 			console.log("Player 2 wins!");
-			document.getElementById('status').innerHTML = "Player 2 wins!!!";
+			document.getElementById('status-d').innerHTML = "Player 2 wins!";
 			gameOver = true;
 		}
 		if (result === -1) {
 			console.log("Tie");
-			document.getElementById('status').innerHTML = "It's a Tie!!!";
+			document.getElementById('status-d').innerHTML = "It's a Tie!";
 			gameOver = true;
 		}
 		if (result === false) {
-			document.getElementById('status').innerHTML = "Game in Progress";
+			document.getElementById('status-d').innerHTML = "Game in Progress";
 			console.log("Game must go on!");
 		}
 	}
@@ -83,7 +81,7 @@ function checkEndGame() {
 		}
 	}
 
-	//check tic tac toe
+	//check tie
 	var tie = true;
 	for (var i = 0; i < clicked.length; i++) {
 		if (clicked[i] === false) {
@@ -108,6 +106,5 @@ function restart (event){
 	}
 	turn = true;
 	gameOver = false;
-	document.getElementById("status").innerHTML = "New Game";
+	document.getElementById("status-d").innerHTML = "New Game";
 }
-
